@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IstripuenKudeaketaYago.OrriNagusia"
+             Title="Istripuen Kudeaketa"
+             BackgroundColor="White">
+
+    <ContentPage.MenuBarItems>
+
+        <MenuBarItem Text="Mantentze-lanak">
+            <MenuFlyoutItem Text="Ibilgailuak"
+                            Command="{Binding JoanIbilgailuetaraKomandoa}" />
+            <MenuFlyoutItem Text="Istripuak"
+                            Command="{Binding JoanIstripuetaraKomandoa}" />
+        </MenuBarItem>
+
+        <MenuBarItem Text="Estatistikak">
+            <MenuFlyoutItem Text="Urtean hilketa gehien" 
+                            Command="{Binding AldatuLekuaKomandoa}" 
+                            CommandParameter="Hilketa"/>
+            <MenuFlyoutItem Text="Urtean istripu gutxien" 
+                            Command="{Binding AldatuLekuaKomandoa}" 
+                            CommandParameter="Istripuak"/>
+        </MenuBarItem>
+
+        <MenuBarItem Text="Inprimatu">
+            <MenuFlyoutItem Text="Istripuak urteka" 
+                            Command="{Binding EguneratuKomandoa}"/>
+            <MenuFlyoutItem Text="Istripu larriena" 
+                            Command="{Binding AldatuGaiaKomandoa}"/>
+        </MenuBarItem>
+
+    </ContentPage.MenuBarItems>
+
+    <VerticalStackLayout Spacing="25" Padding="30" VerticalOptions="Center">
+
+        <Label Text="Ongi Etorri Istripuen Kudeaketara"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#1A237E" />
+
+        <Label Text="Erabili goiko menua nabigatzeko."
+               FontSize="16"
+               TextColor="Gray"
+               HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+
+</ContentPage>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="IstripuenKudeaketaYago.IbilgailuakOrria"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Ibilgailuak">
+
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="Hasiera">
+            <MenuFlyoutItem Command="{Binding JoanHasieraraKomandoa}" Text="Joan Orri Nagusira" />
+        </MenuBarItem>
+        <MenuBarItem Text="Estatistikak">
+            <MenuFlyoutItem
+                Command="{Binding AldatuLekuaKomandoa}"
+                CommandParameter="Hilketa"
+                Text="Urtean hilketa gehien" />
+            <MenuFlyoutItem
+                Command="{Binding AldatuLekuaKomandoa}"
+                CommandParameter="Istripuak"
+                Text="Urtean istripu gutxien" />
+        </MenuBarItem>
+        <MenuBarItem Text="Inprimatu">
+            <MenuFlyoutItem Command="{Binding EguneratuKomandoa}" Text="Istripuak urteka" />
+            <MenuFlyoutItem Command="{Binding AldatuGaiaKomandoa}" Text="Istripu larriena" />
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+
+    <VerticalStackLayout Padding="10" Spacing="10">
+
+        <Border
+            Padding="5"
+            BackgroundColor="#F0F0F0"
+            Stroke="Gray"
+            StrokeThickness="1">
+            <HorizontalStackLayout HorizontalOptions="Start" Spacing="5">
+                <Button
+                    Padding="0"
+                    BackgroundColor="#E0E0E0"
+                    Clicked="LehenengoaKlikatzean"
+                    HeightRequest="35"
+                    Text="|&lt;&lt;"
+                    TextColor="Black"
+                    WidthRequest="40" />
+                <Button
+                    Padding="0"
+                    BackgroundColor="#E0E0E0"
+                    Clicked="AurrekoaKlikatzean"
+                    HeightRequest="35"
+                    Text="&lt;"
+                    TextColor="Black"
+                    WidthRequest="35" />
+
+                <Label
+                    x:Name="KontagailuaEtiketa"
+                    Margin="10,0"
+                    FontAttributes="Bold"
+                    Text="0 / 0"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+
+                <Button
+                    Padding="0"
+                    BackgroundColor="#E0E0E0"
+                    Clicked="HurrengoaKlikatzean"
+                    HeightRequest="35"
+                    Text="&gt;"
+                    TextColor="Black"
+                    WidthRequest="35" />
+                <Button
+                    Padding="0"
+                    BackgroundColor="#E0E0E0"
+                    Clicked="AzkenaKlikatzean"
+                    HeightRequest="35"
+                    Text="&gt;&gt;|"
+                    TextColor="Black"
+                    WidthRequest="40" />
+
+                <BoxView
+                    Margin="5,0"
+                    WidthRequest="1"
+                    Color="Gray" />
+
+                <Button
+                    Padding="0"
+                    BackgroundColor="#FFF9C4"
+                    Clicked="BerriaKlikatzean"
+                    FontAttributes="Bold"
+                    HeightRequest="35"
+                    Text="+"
+                    TextColor="Black"
+                    WidthRequest="35" />
+                <Button
+                    Padding="0"
+                    BackgroundColor="#FFCDD2"
+                    Clicked="EzabatuKlikatzean"
+                    FontAttributes="Bold"
+                    HeightRequest="35"
+                    Text="X"
+                    TextColor="Red"
+                    WidthRequest="35" />
+                <Button
+                    Padding="0"
+                    BackgroundColor="#C8E6C9"
+                    Clicked="GordeKlikatzean"
+                    HeightRequest="35"
+                    Text="💾"
+                    TextColor="Black"
+                    WidthRequest="35" />
+            </HorizontalStackLayout>
+        </Border>
+
+        <Frame
+            Padding="20"
+            BackgroundColor="White"
+            BorderColor="Gray"
+            CornerRadius="0"
+            HasShadow="False">
+            <Grid
+                ColumnDefinitions="100, *"
+                RowDefinitions="Auto, Auto"
+                RowSpacing="15">
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Text="Id:"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+                <Entry
+                    x:Name="IdSarrera"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    BackgroundColor="White"
+                    HorizontalOptions="Start"
+                    Keyboard="Numeric"
+                    TextColor="Black"
+                    WidthRequest="100" />
+
+                <Label
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="Izena:"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+                <Entry
+                    x:Name="IzenaSarrera"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    BackgroundColor="White"
+                    HorizontalOptions="Fill"
+                    TextColor="Black" />
+
+            </Grid>
+        </Frame>
+
+    </VerticalStackLayout>
+</ContentPage>

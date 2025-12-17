@@ -1,0 +1,85 @@
+## =========================
+## Visual Studio
+## =========================
+.vs/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+## =========================
+## Build results
+## =========================
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+## =========================
+## .NET / MAUI
+## =========================
+*.dll
+*.exe
+*.app
+*.ipa
+*.apk
+*.aab
+*.pdb
+*.mdb
+*.log
+
+## =========================
+## MAUI specific
+## =========================
+platforms/*/bin/
+platforms/*/obj/
+
+## Android
+*.keystore
+*.jks
+local.properties
+
+## iOS / MacCatalyst
+*.xcuserstate
+*.xcworkspace
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+DerivedData/
+
+## =========================
+## NuGet
+## =========================
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+## =========================
+## OS files
+## =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## =========================
+## Logs & temp
+## =========================
+*.tmp
+*.temp
+*.cache
+*.bak
+*.swp
+
+## =========================
+## Rider / VS Code
+## =========================
+.idea/
+.vscode/

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="IstripuenKudeaketaYago.EmaitzakOrria"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Txostena"
+    BackgroundColor="White">
+
+    <Grid
+        Padding="20"
+        RowDefinitions="Auto, *, Auto"
+        RowSpacing="10">
+
+        <Label
+            x:Name="IzenburuaEtiketa"
+            Grid.Row="0"
+            FontAttributes="Bold"
+            FontSize="20"
+            HorizontalOptions="Center"
+            Text="EMAITZAK"
+            TextColor="Black" />
+
+        <Border
+            Grid.Row="1"
+            Padding="10"
+            BackgroundColor="#FAFAFA"
+            Stroke="Gray">
+            <ScrollView>
+                <Label
+                    x:Name="DatuakEtiketa"
+                    FontFamily="Consolas, Monospace"
+                    FontSize="14"
+                    TextColor="Black" />
+            </ScrollView>
+        </Border>
+
+        <Button
+            Grid.Row="2"
+            BackgroundColor="Black"
+            Clicked="ItxiBotoiaSakatzean"
+            Text="Itxi"
+            TextColor="White" />
+    </Grid>
+
+</ContentPage>
